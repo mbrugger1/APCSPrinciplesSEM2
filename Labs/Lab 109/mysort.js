@@ -12,6 +12,6 @@ function merge(left, right){
        result.push(right[r++]);
     }
   }
-  //remaining part needs to be addred to the result
+  //remaining part needs to be added to the result
   return result.concat(left.slice(l)).concat(right.slice(r));
 }
