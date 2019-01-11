@@ -1,11 +1,11 @@
 //Markus Brugger
 
-function selectionSort(arr){
+function selectionSort(txt){
   var min;
   var temp;
       length = arr.length;
   for(var i = 0; i < length; i++){
-    minIdx = i;
+    min = i;
     for(var  j = i+1; j<length; j++){
        if(arr[j]<arr[min]){
           min = j;

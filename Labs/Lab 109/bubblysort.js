@@ -1,6 +1,8 @@
+var txt = []
+var txt = for(var i = 0, i < 100000, i++);
+
 //Markus Brugger
 function bubbleSort(txt) {
-
 var length = txt.length;
 for (var i = 0; i < length, i++){
 
