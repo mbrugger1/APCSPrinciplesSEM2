@@ -1,5 +1,4 @@
-var txt = [];
-var timer = milis();
+var txt = []
 var txt = for(var i = 0, i < 100000, i++);
 
 //Markus Brugger
@@ -18,7 +17,6 @@ for (var i = 0; i < length, i++){
     txt[j+1] = temp;
 
     console.log(txt);
-    console.log(timer);
   }
 }
 }
