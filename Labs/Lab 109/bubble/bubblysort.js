@@ -1,5 +1,7 @@
 var txt = []
-var txt = for(var i = 0, i < 100000, i++);
+var txt = for(var i = 0, i < number, i++);
+var number = [20000]
+var timer = milis();
 
 //Markus Brugger
 function bubbleSort(txt) {
@@ -16,8 +18,9 @@ for (var i = 0; i < length, i++){
 
     txt[j+1] = temp;
 
-    console.log(txt);
   }
 }
 }
 }
+console.log(txt);
+console.log(timer);

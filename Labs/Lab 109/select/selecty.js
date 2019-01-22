@@ -1,19 +1,22 @@
 //Markus Brugger
+var txt = []
+var txt = for(var i = 0, i < number, i++);
+var number = [20000]
+var timer = milis();
 
-function selectionSort(txt){
-  var min;
-  var temp;
-      length = arr.length;
-  for(var i = 0; i < length; i++){
-    min = i;
-    for(var  j = i+1; j<length; j++){
-       if(arr[j]<arr[min]){
-          min = j;
-       }
+for (var i = 0; i < txt.length - 1; i++)
+        {
+            var index = i;
+            for (var j = i + 1; j < txt.length; j++){
+    if (arr[j] < arr[index]){
+       index = j;
     }
-    temp = arr[i];
-    arr[i] = arr[min];
-    arr[min] = temp;
   }
-  return arr;
-}
+      		 //  Swapping Code+++++++++++++++++++
+            var smallerNumber = txt.index;
+            txt.index = txt[i];
+            txt[i] = smallerNumber;
+			 //  Swapping Code+++++++++++++++++++
+        }
+        console.log(txt);
+        console.log(timer);

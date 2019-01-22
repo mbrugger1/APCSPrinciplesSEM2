@@ -1,16 +1,23 @@
 //  Global variables
-function insertionSort (items) {
-  for (var i = 0; i < items.length; i++) {
-    let value = items[i]
-    // store the current item value so it can be placed right
-    for (var j = i - 1; j > -1 && items[j] > value; j--) {
-      // loop through the items in the sorted array (the items from the current to the beginning)
-      // copy each item to the next one
-      items[j + 1] = items[j]
-    }
-    // the last item we've reached should now hold the value of the currently sorted item
-    items[j + 1] = value
-  }
+var txt = []
+var txt = for(var i = 0, i < number, i++);
+var number = [20000]
+var timer = milis();
 
-  return list
-}
+
+var temp;
+        for (var  i = 1; i < arr.length; i++)
+ {
+              for(var  j = i ; j > 0 ; j--)
+              {
+//  Swapping Code +++++++++
+                 if(arr[j] < arr[j-1]){
+                    temp = arr[j];
+                    arr[j] = arr[j-1];
+                    arr[j-1] = temp;
+                  }
+				//  Swapping Code +++++++++
+              }
+         }
+         console.log(txt);
+         console.log(timer);
