@@ -5,7 +5,7 @@ function setup(){
   var cnv = createCanvas(800, 800);
   cnv.position((windowWidth-width)/2, 30);
   background(20, 20, 20);
-  loadBalls(1);
+  loadBalls(1);a
   b1 = new Ball(createVector(width/2, height/2), createVector(2,5), 100, color(255, 0, 0));
 }
 
