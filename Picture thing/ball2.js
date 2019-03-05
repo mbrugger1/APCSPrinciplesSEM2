@@ -15,17 +15,19 @@ function Ball(loc, vel, rad, col){
   this.update = function(){
     if(this !== b1){
       var d = this.loc.dist(b1.loc);
-      if(d>250){
+      if(d>200){
         var attForce = p5.Vector.sub(b1.loc, this.loc);
         attForce.normalize();
         attForce.mult(.05);
-        this.vel.add(repForce);
+        this.vel.add(attForce);
       }
-      if(d<85){
+      if(d<200){
         var repForce = p5.Vector.add(b1.loc, this.loc);
         repForce.normalize();
-        repForce.mult(.05);
-        this.vel.mult(-.01);
+        repForce.mult(.02);
+      //  this.vel.mult(-2);
+        this.vel.add(repForce);
+
       }
     }
     this.loc.add(this.vel);
@@ -33,24 +35,27 @@ function Ball(loc, vel, rad, col){
   //checkEdges() reverses speed when the ball touches an edge
   this.checkEdges = function(){
     if(this.loc.x < 100) this.vel.x = -this.vel.x;
-    if(this.loc.x > width-100) this.vel.x = -this.vel.x;
+    if(this.loc.x > width) this.vel.x = -this.vel.x;
     if(this.loc.y < 100) this.vel.y = -this.vel.y;
-    if(this.loc.y > height-100) this.vel.y = -this.vel.y;
+    if(this.loc.y > height) this.vel.y = -this.vel.y;
   }
 
   //render() draws the ball at the new location
   this.render = function(){
     var d = this.loc.dist(b1.loc);
-  if(d<400){
+  if(d<300){
 stroke(255,255,255);
 strokeWeight(2);
 }  else {stroke(random(0, 30), random(100, 255), random(180, 255), 150);
     strokeWeight(2)}
-  //line(Balls[i].loc.x, Balls[i].loc.y, Balls[i].loc.x, Balls[i+1].loc.y, 30);
- line(this.loc.x, this.loc.y, 0, 0, 200);
+  //line(this.loc.x, this.loc.y, b1.loc.x, b1.loc.y, 0);
+ line(this.loc.x, this.loc.y, 0, 0);
   line(this.loc.x, this.loc.y, 800, 0);
-  line(this.loc.x, this.loc.y, 0, 800);
-     line(this.loc.x, this.loc.y, 800, 800, 0);
- line(this.loc.x, this.loc.y, 400, 400, 200);
+   line(this.loc.x, this.loc.y, 0, 800);
+//      line(this.loc.x, this.loc.y, 800, 800, 0);
+  line(this.loc.x, this.loc.y, b1.loc.x, b1.loc.y);
+  line(b1.loc.y, b1.loc.x, this.loc.y, this.loc.x);
+    line(b1.loc.y-200, b1.loc.x, this.loc.y, this.loc.x);\
+    triangle(this.loc.x, this.loc.y, b1.loc.x, b1.loc.y, this.loc.x+200, this.loc.y+200);
   }
 }
