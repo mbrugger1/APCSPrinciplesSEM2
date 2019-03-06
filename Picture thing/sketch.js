@@ -5,8 +5,8 @@ function setup(){
   var cnv = createCanvas(800, 1000);
   cnv.position((windowWidth-width)/2, 30);
   background(20, 20, 20);
-  loadBalls(50);
-  b1 = new Ball(createVector(width/2, height/2), createVector(0,0), 100, color(255, 0, 0));
+  loadBalls(75);
+  b1 = new Ball(createVector(width/2, height/2), createVector(5,10), 100, color(255, 0, 0));
 }
 
 function loadBalls(number){

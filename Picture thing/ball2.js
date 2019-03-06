@@ -34,10 +34,10 @@ function Ball(loc, vel, rad, col){
   }
   //checkEdges() reverses speed when the ball touches an edge
   this.checkEdges = function(){
-    if(this.loc.x < 100) this.vel.x = -this.vel.x;
+    if(this.loc.x < 0) this.vel.x = -this.vel.x;
     if(this.loc.x > width) this.vel.x = -this.vel.x;
-    if(this.loc.y < 100) this.vel.y = -this.vel.y;
-    if(this.loc.y > height) this.vel.y = -this.vel.y;
+    if(this.loc.y < 0) this.vel.y = -this.vel.y;
+    if(this.loc.y > height-100) this.vel.y = -this.vel.y;
   }
 
   //render() draws the ball at the new location
@@ -46,16 +46,18 @@ function Ball(loc, vel, rad, col){
   if(d<300){
 stroke(255,255,255);
 strokeWeight(2);
-}  else {stroke(random(0, 30), random(100, 255), random(180, 255), 150);
+}
+    else {stroke(random(0, 30), random(100, 255), random(180, 255), 150);
     strokeWeight(2)}
   //line(this.loc.x, this.loc.y, b1.loc.x, b1.loc.y, 0);
- line(this.loc.x, this.loc.y, 0, 0);
-  line(this.loc.x, this.loc.y, 800, 0);
-   line(this.loc.x, this.loc.y, 0, 800);
-//      line(this.loc.x, this.loc.y, 800, 800, 0);
-  line(this.loc.x, this.loc.y, b1.loc.x, b1.loc.y);
-  line(b1.loc.y, b1.loc.x, this.loc.y, this.loc.x);
-    line(b1.loc.y-200, b1.loc.x, this.loc.y, this.loc.x);\
-    triangle(this.loc.x, this.loc.y, b1.loc.x, b1.loc.y, this.loc.x+200, this.loc.y+200);
+//  line(this.loc.x, this.loc.y, 0, 0);
+//   line(this.loc.x, this.loc.y, 800, 0);
+  //  line(this.loc.x, this.loc.y, 0, 800);
+  //    line(this.loc.x, this.loc.y, 800, 800, 0);
+  //line(this.loc.x, this.loc.y, b1.loc.x, b1.loc.y);
+  line(this.loc.x, this.loc.y, d, d)
+//  line(b1.loc.y, b1.loc.x, this.loc.y, this.loc.x);
+//    line(b1.loc.y-200, b1.loc.x, this.loc.y, this.loc.x);
+  //  line(Balls[i+1].loc.x, Balls[i+1].loc.y, this.loc.x, this.loc.y);
   }
 }
