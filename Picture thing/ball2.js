@@ -37,7 +37,7 @@ function Ball(loc, vel, rad, col){
     if(this.loc.x < 0) this.vel.x = -this.vel.x;
     if(this.loc.x > width) this.vel.x = -this.vel.x;
     if(this.loc.y < 0) this.vel.y = -this.vel.y;
-    if(this.loc.y > height-100) this.vel.y = -this.vel.y;
+    if(this.loc.y > height) this.vel.y = -this.vel.y;
   }
 
   //render() draws the ball at the new location
@@ -54,8 +54,8 @@ strokeWeight(2);
 //   line(this.loc.x, this.loc.y, 800, 0);
   //  line(this.loc.x, this.loc.y, 0, 800);
   //    line(this.loc.x, this.loc.y, 800, 800, 0);
-  //line(this.loc.x, this.loc.y, b1.loc.x, b1.loc.y);
-  line(this.loc.x, this.loc.y, d, d)
+//  ellipse(this.loc.x, this.loc.y, b1.loc.x-800, b1.loc.y-800);
+  line(this.loc.y, this.loc.x, d, d, random(0,55))
 //  line(b1.loc.y, b1.loc.x, this.loc.y, this.loc.x);
 //    line(b1.loc.y-200, b1.loc.x, this.loc.y, this.loc.x);
   //  line(Balls[i+1].loc.x, Balls[i+1].loc.y, this.loc.x, this.loc.y);
